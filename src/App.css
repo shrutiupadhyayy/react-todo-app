@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  /* background-image: 
+  linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+  background: linear-gradient(-45deg, #f1592a, #f72e7b,
+   #046486, #048f6e, #4b1780);
+    background-size: 400% 400%;
+    animation: gradient 14s ease infinite;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 650px;
+  background: #121522;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: rgb(209, 209, 209);
+  font-size: 28px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #156296;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 6.5px 6.5px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    130deg,
+    #216da0 0%,
+    #4851fd 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    #4158D0 0%,
+    #C850C0 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(253, 142, 62) 0%,
+    rgb(196, 56, 1) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) { 
+  background: linear-gradient(
+    90deg,
+    rgb(142, 86, 255) 0%,
+    rgb(98, 0, 158) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 2) {
+  
+  background: linear-gradient(
+    90deg,
+    rgb(243, 24, 232) 0%,
+    rgb(99, 2, 54) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgb(32, 159, 250) 0%,
+    rgb(2, 58, 131) 100%
+  );
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 25.2px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: rgb(207, 204, 204);
+}
+
+.edit-icon {
+  color: rgb(190, 188, 188);
+}
